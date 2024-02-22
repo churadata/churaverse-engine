@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  churaverse-engine-client:
+    image: node:18.14.0
+    container_name: churaverse-engine-client
+    tty: true
+    volumes:
+      - .:/usr/churaverse-engine-client
+    expose:
+      - 3000
+    working_dir: /usr/churaverse-engine-client
+    init: true
+    command: bash -c "npm i && /bin/bash"
