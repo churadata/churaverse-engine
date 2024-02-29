@@ -7,20 +7,16 @@ services:
     tty: true
     volumes:
       - ./churaverse-engine-client:/usr/churaverse-engine-client
-    expose:
-      - 3000
     working_dir: /usr/churaverse-engine-client
     init: true
     command: bash -c "npm i && /bin/bash"
 
-  # churaverse-engine-server:
-  #   image: node:18.14.0
-  #   container_name: churaverse-engine-server
-  #   tty: true
-  #   volumes:
-  #     - ./churaverse-engine-server:/usr/churaverse-engine-server
-  #   expose:
-  #     - 3000
-  #   working_dir: /usr/churaverse-engine-server
-  #   init: true
-  #   command: bash -c "npm i && /bin/bash"
+  churaverse-engine-server:
+    image: node:18.14.0
+    container_name: churaverse-engine-server
+    tty: true
+    volumes:
+      - ./churaverse-engine-server:/usr/churaverse-engine-server
+    working_dir: /usr/churaverse-engine-server
+    init: true
+    command: bash -c "npm i && /bin/bash"
