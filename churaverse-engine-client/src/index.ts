@@ -8,7 +8,7 @@ export { Position } from './domain/model/core/position'
 export type { Vector } from './domain/model/core/vector'
 export { WorldTime } from './domain/model/worldTime'
 
-export { DamageCause, type DamageCauseType } from './domain/model/damageCause'
+export { DamageCause, type DamageCauseType, type DamageCauseMap } from './domain/model/damageCause'
 export { Entity } from './domain/model/entity'
 export { LivingEntity } from './domain/model/livingEntity'
 export { WeaponDamageCause } from './domain/model/weaponDamageCause'
