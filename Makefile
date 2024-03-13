@@ -3,7 +3,3 @@ local_start:
 
 local_stop:
 	docker-compose down
-
-package_build:
-	docker-compose up -d
-	npm run build
