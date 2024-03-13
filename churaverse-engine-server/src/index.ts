@@ -5,7 +5,7 @@ export { startScenes } from './startScenes'
 
 export { Direction, vectorToName, parse } from './domain/core/direction'
 export { Position } from './domain/core/position'
-export type { Vector } from './domain/core/vector'
+export { type Vector } from './domain/core/vector'
 export { WorldTime } from './domain/model/worldTime'
 
 export { DamageCause, type DamageCauseType, type DamageCauseMap } from './domain/model/damageCause'
@@ -20,7 +20,8 @@ export { ITitleScene } from './scene/IScene/ITitleScene'
 export { MainScene } from './scene/main'
 export { TitleScene } from './scene/title'
 
-export * from './store/store'
+export { Store } from './store/store'
+export type { StoreInTitle, StoreInMain, StoreIn } from './store/store'
 export type { UtilStoreInMain, UtilStoreInTitle } from './store/utilStore'
 
 export const GRID_SIZE = 40
