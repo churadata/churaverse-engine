@@ -1,4 +1,4 @@
-export { pluginConfig } from './plugins/core/pluginConfig'
+export { type IChuraverseConfig, defineChuraverseConfig, getChuraverseConfig } from './churaverseConfig'
 export type { IEventBus } from './eventbus/IEventBus'
 export { EVENT_PRIORITY } from './eventbus/eventPriority'
 export { startScenes } from './startScenes'

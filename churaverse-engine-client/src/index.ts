@@ -1,7 +1,10 @@
 export { Churaverse } from './ChuraverseComponent'
-export { pluginConfig } from './plugins/core/pluginConfig'
+export { type IChuraverseConfig, defineChuraverseConfig, getChuraverseConfig } from './churaverseConfig'
+export type { IPluginConfig, IPluginConfigOptions } from './plugins/core/IPluginConfig'
 export type { IEventBus } from './eventbus/IEventBus'
 export { EVENT_PRIORITY } from './eventbus/eventPriority'
+
+export * from './animation/animationConfig'
 
 export { Direction, vectorToName, parse } from './domain/model/core/direction'
 export { Position } from './domain/model/core/position'
@@ -35,11 +38,12 @@ export type { AbstractDOMLayerNames } from './ui/domLayer'
 export { createUIContainer } from './ui/container'
 export const GRID_SIZE = 40
 
+export { HpBarRenderer } from './renderer/hpBarRenderer'
+
 export type KeyCode = keyof typeof Phaser.Input.Keyboard.KeyCodes
 
 export type { Scenes, SceneMap, SceneName } from './scene/types'
 export { BasePlugin } from './plugins/core/basePlugin/basePlugin'
-export type { IPluginConfig } from './plugins/core/IPluginConfig'
 
 export { CVError } from './error/cvError'
 export { SceneUndefinedError } from './error/sceneUndefinedError'
