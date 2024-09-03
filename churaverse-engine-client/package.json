@@ -1,6 +1,5 @@
 {
   "name": "churaverse-engine-client",
-  "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
@@ -35,7 +34,6 @@
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
-  "author": "",
   "license": "MIT",
   "files": [
     "dist"

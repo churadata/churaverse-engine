@@ -13,7 +13,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tsc"
   },
-  "author": "",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.11.23",
