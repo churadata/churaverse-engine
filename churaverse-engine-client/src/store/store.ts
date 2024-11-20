@@ -34,6 +34,15 @@ export class Store<Scene extends Scenes> {
     return store
   }
 
+  /**
+   * 指定したstoreをリセットする
+   * リセットされたstoreの値はundefinedになる
+   * @param storeName リセットしたいstoreの名前
+   */
+  public reset<Key extends keyof StoreIn<Scene>>(storeName: Key): void {
+    this.shared[storeName] = undefined
+  }
+
   public deleteStore(): void {
     this.shared = {}
   }
@@ -51,5 +60,5 @@ export interface StoreInMain {
 export type StoreIn<Scene extends Scenes> = Scene extends ITitleScene
   ? StoreInTitle
   : Scene extends IMainScene
-  ? StoreInMain
-  : never
+    ? StoreInMain
+    : never

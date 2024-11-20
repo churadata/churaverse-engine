@@ -21,6 +21,16 @@ export interface IEventBus<Scene extends Scenes> {
   ) => void
 
   /**
+   * イベントがpostされた時に実行されるlistener(callback)を削除する.
+   * @param type イベント名
+   * @param listener 削除するlistener
+   */
+  unsubscribeEvent: <EvType extends CVEventType<Scene>>(
+    type: EvType,
+    listener: CVEventListener<CVEventMap<Scene>[EvType]>
+  ) => void
+
+  /**
    * イベントを発火する. subscribeEventで登録したlistenerが実行される.
    * @param event 発火するイベント
    */
