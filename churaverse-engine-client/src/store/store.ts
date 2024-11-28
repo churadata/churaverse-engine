@@ -35,11 +35,11 @@ export class Store<Scene extends Scenes> {
   }
 
   /**
-   * 指定したstoreをリセットする
+   * 指定したstoreを削除する
    * リセットされたstoreの値はundefinedになる
    * @param storeName リセットしたいstoreの名前
    */
-  public reset<Key extends keyof StoreIn<Scene>>(storeName: Key): void {
+  public deleteStoreOf<Key extends keyof StoreIn<Scene>>(storeName: Key): void {
     this.shared[storeName] = undefined
   }
 
