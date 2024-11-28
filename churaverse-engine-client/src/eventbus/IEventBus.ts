@@ -29,6 +29,7 @@ export interface IEventBus<Scene extends Scenes> {
     type: EvType,
     listener: CVEventListener<CVEventMap<Scene>[EvType]>
   ) => void
+
   /**
    * イベントを発火する. subscribeEventで登録したlistenerが実行される.
    * @param event 発火するイベント
