@@ -17,6 +17,14 @@ export class EventBus<Scene extends Scenes> implements IEventBus<Scene> {
     listenerList.register(priority, listener)
   }
 
+  public unsubscribeEvent<EvType extends CVEventType<Scene>>(
+    type: EvType,
+    listener: CVEventListener<CVEventMap<Scene>[EvType]>
+  ): void {
+    const listenerList = this.eventListenerHelper.getListenerList<EvType>(type)
+    listenerList.unregister(listener)
+  }
+
   public post(event: CVEventMap<Scene>[string]): void {
     for (const listener of this.getListeners(event.type)) {
       if (event.isCanceled) break

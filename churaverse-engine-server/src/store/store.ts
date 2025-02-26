@@ -35,6 +35,15 @@ export class Store<Scene extends Scenes> {
     return store
   }
 
+  /**
+   * 指定したstoreを削除する
+   * 削除されたstoreの値はundefinedになる
+   * @param storeName 削除したいstoreの名前
+   */
+  public deleteStoreOf<Key extends keyof StoreIn<Scene>>(storeName: Key): void {
+    this.shared[storeName] = undefined
+  }
+
   public deleteStore(): void {
     this.shared = {}
   }
