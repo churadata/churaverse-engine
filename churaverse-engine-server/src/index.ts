@@ -34,6 +34,7 @@ export { CVError } from './error/cvError'
 export { SceneUndefinedError } from './error/sceneUndefinedError'
 
 export type { KnownKeyOf } from './utilTypes/knownKeyOf'
+export type { Writable, PartialWritable } from './utilTypes/writeable'
 
 export type { CVEventMap, CVEventType, CVMainEventMap, CVTitleEventMap } from './event/events'
 
