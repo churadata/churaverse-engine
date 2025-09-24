@@ -52,6 +52,7 @@ export { UIError } from './error/uiError'
 export { UINotFoundError } from './error/uiNotFoundError'
 
 export type { KnownKeyOf } from './utilTypes/knownKeyOf'
+export type { Writable, PartialWritable } from './utilTypes/writeable'
 
 export type { CVEventMap, CVEventType, CVMainEventMap, CVTitleEventMap } from './event/events'
 
