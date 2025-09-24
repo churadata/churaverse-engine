@@ -1,6 +1,6 @@
 {
   "name": "churaverse-engine-server",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "type": "commonjs",
   "module": "dist/index.js",
