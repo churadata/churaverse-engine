@@ -9,7 +9,7 @@ export abstract class ITitleScene extends BaseScene {
   public constructor() {
     super('TitleScene', {
       key: 'TitleScene',
-      active: false,
+      active: true,
     })
   }
 

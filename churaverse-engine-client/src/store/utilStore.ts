@@ -5,3 +5,6 @@ export interface UtilStoreInTitle {}
 export interface UtilStoreInMain {
   focusedRenderer: IFocusableRenderer
 }
+export interface UtilStoreInMeeting {
+  focusedRenderer: IFocusableRenderer
+}

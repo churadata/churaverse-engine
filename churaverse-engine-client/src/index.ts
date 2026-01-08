@@ -25,8 +25,8 @@ export { MainScene } from './scene/main'
 export { TitleScene } from './scene/title'
 
 export { Store } from './store/store'
-export type { StoreInTitle, StoreInMain, StoreIn } from './store/store'
-export type { UtilStoreInMain, UtilStoreInTitle } from './store/utilStore'
+export type { StoreInTitle, StoreInMain, StoreInMeeting, StoreIn } from './store/store'
+export type { UtilStoreInMain, UtilStoreInMeeting, UtilStoreInTitle } from './store/utilStore'
 
 export { uniqueId } from './uniqueId'
 
