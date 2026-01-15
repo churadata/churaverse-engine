@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import 'phaser'
 import { MainScene } from './scene/main'
+import { MeetingScene } from './scene/meeting'
 import { TitleScene } from './scene/title'
 import { DomManager } from './ui/domManager'
 import './ChuraverseComponent.module.scss'
@@ -37,7 +38,7 @@ const defaultConfig: Phaser.Types.Core.GameConfig = {
     },
   },
   // ここで読み込むシーンを取得する
-  scene: [TitleScene, MainScene],
+  scene: [TitleScene, MainScene, MeetingScene],
 }
 
 export const Churaverse: React.FC<{ gameConfig?: Phaser.Types.Core.GameConfig }> = ({ gameConfig = defaultConfig }) => {
