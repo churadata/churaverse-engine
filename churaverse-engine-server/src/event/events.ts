@@ -25,10 +25,10 @@ export interface CVMeetingEventMap {}
 export type CVEventMap<Scene extends Scenes> = Scene extends ITitleScene
   ? CVTitleEventMap & { [type: string]: CVEvent<ITitleScene> }
   : Scene extends IMainScene
-    ? CVMainEventMap & { [type: string]: CVEvent<IMainScene> }
+  ? CVMainEventMap & { [type: string]: CVEvent<IMainScene> }
     : Scene extends IMeetingScene
       ? CVMeetingEventMap & { [type: string]: CVEvent<IMeetingScene> }
-      : never
+  : never
 
 export type CVTitleEventType = keyof CVTitleEventMap
 export type CVMainEventType = keyof CVMainEventMap
@@ -36,7 +36,7 @@ export type CVMeetingEventType = keyof CVMeetingEventMap
 export type CVEventType<Scene extends Scenes> = Scene extends ITitleScene
   ? CVTitleEventType
   : Scene extends IMainScene
-    ? CVMainEventType
+  ? CVMainEventType
     : Scene extends IMeetingScene
       ? CVMeetingEventType
-      : never
+  : never

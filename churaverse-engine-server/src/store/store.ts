@@ -68,4 +68,4 @@ export type StoreIn<Scene extends Scenes> = Scene extends ITitleScene
     ? StoreInMain
     : Scene extends IMeetingScene
       ? StoreInMeeting
-      : never
+    : never

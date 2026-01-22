@@ -16,4 +16,8 @@ declare module '../../events' {
   export interface CVMainEventMap {
     phaserSceneInit: PhaserSceneInit
   }
+
+  export interface CVMeetingEventMap {
+    phaserSceneInit: PhaserSceneInit
+  }
 }

@@ -26,9 +26,9 @@ export interface CVMeetingEventMap {}
 export type CVEventMap<Scene extends Scenes> = Scene extends ITitleScene
   ? CVTitleEventMap & { [type: string]: CVEvent<ITitleScene> }
   : Scene extends IMainScene
-    ? CVMainEventMap & { [type: string]: CVEvent<IMainScene> }
+  ? CVMainEventMap & { [type: string]: CVEvent<IMainScene> }
     : Scene extends IMeetingScene
       ? CVMeetingEventMap & { [type: string]: CVEvent<IMeetingScene> }
-      : never
+  : never
 
 export type CVEventType<Scene extends Scenes> = KnownKeyOf<CVEventMap<Scene>>
