@@ -74,6 +74,18 @@ export class DomManager {
   }
 
   /**
+   * idで指定したHTMLElementを取得する. 存在しないidを指定した場合はnullを返す
+   * @param id
+   * @returns
+   */
+  public static getElementByIdOrNull<T extends HTMLElement>(id: string): T | null {
+    const el = document.getElementById(id)
+
+    if (el === null) return null
+    return el as T
+  }
+
+  /**
    * uiContainerの子要素を全て削除
    */
   public static removeAll(): void {
