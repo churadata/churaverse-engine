@@ -63,11 +63,9 @@ export class DomManager {
 
   /**
    * idで指定したHTMLElementを取得する. 存在しないidを指定した場合はエラー
-   * @param id
-   * @returns
    */
   public static getElementById<T extends HTMLElement>(id: string): T {
-    const el = document.getElementById(id)
+    const el = this.getElementByIdOrNull(id)
 
     if (el === null) throw new UINotFoundError(id)
     return el as T
@@ -75,8 +73,6 @@ export class DomManager {
 
   /**
    * idで指定したHTMLElementを取得する. 存在しないidを指定した場合はnullを返す
-   * @param id
-   * @returns
    */
   public static getElementByIdOrNull<T extends HTMLElement>(id: string): T | null {
     const el = document.getElementById(id)
