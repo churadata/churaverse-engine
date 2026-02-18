@@ -20,13 +20,15 @@ export type { WeaponEntity } from './domain/model/weaponEntity'
 export type { IFocusableRenderer } from './domain/interface/IFocusableRenderer'
 
 export { IMainScene } from './scene/IScene/IMainScene'
+export { IMeetingScene } from './scene/IScene/IMeetingScene'
 export { ITitleScene } from './scene/IScene/ITitleScene'
 export { MainScene } from './scene/main'
+export { MeetingScene } from './scene/meeting'
 export { TitleScene } from './scene/title'
 
 export { Store } from './store/store'
-export type { StoreInTitle, StoreInMain, StoreIn } from './store/store'
-export type { UtilStoreInMain, UtilStoreInTitle } from './store/utilStore'
+export type { StoreInTitle, StoreInMain, StoreInMeeting, StoreIn } from './store/store'
+export type { UtilStoreInMain, UtilStoreInMeeting, UtilStoreInTitle } from './store/utilStore'
 
 export { uniqueId } from './uniqueId'
 
@@ -54,7 +56,7 @@ export { UINotFoundError } from './error/uiNotFoundError'
 export type { KnownKeyOf } from './utilTypes/knownKeyOf'
 export type { Writable, PartialWritable } from './utilTypes/writeable'
 
-export type { CVEventMap, CVEventType, CVMainEventMap, CVTitleEventMap } from './event/events'
+export type { CVEventMap, CVEventType, CVMainEventMap, CVMeetingEventMap, CVTitleEventMap } from './event/events'
 
 export { CVEvent } from './event/cvEvent'
 export { PhaserLoadAssets } from './event/gamePhase/phaser/phaserLoadAssets'

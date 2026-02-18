@@ -2,3 +2,5 @@
 export interface UtilStoreInTitle {}
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface UtilStoreInMain {}
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface UtilStoreInMeeting {}
