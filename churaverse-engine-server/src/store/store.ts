@@ -1,8 +1,7 @@
 import { IMainScene } from '../scene/IScene/IMainScene'
-import { IMeetingScene } from '../scene/IScene/IMeetingScene'
 import { ITitleScene } from '../scene/IScene/ITitleScene'
 import { Scenes } from '../scene/types'
-import { UtilStoreInMain, UtilStoreInMeeting, UtilStoreInTitle } from './utilStore'
+import { UtilStoreInMain, UtilStoreInTitle } from './utilStore'
 
 type AddUndefined<T> = { [P in keyof T]: T[P] | undefined }
 
@@ -50,7 +49,7 @@ export class Store<Scene extends Scenes> {
   }
 }
 
-// 各プラグインで共有データを追加したい場合はStoreInTitle/StoreInMain/StoreInMeetingに対してdeclare moduleを使ってデータの定義を追加する
+// 各プラグインで共有データを追加したい場合はStoreInTitle/StoreInMainに対してdeclare moduleを使ってデータの定義を追加する
 // データを追加する際はsetInitを使ってデータの初期値を設定する必要がある
 export interface StoreInTitle {
   util: UtilStoreInTitle
@@ -58,14 +57,9 @@ export interface StoreInTitle {
 export interface StoreInMain {
   util: UtilStoreInMain
 }
-export interface StoreInMeeting {
-  util: UtilStoreInMeeting
-}
 
 export type StoreIn<Scene extends Scenes> = Scene extends ITitleScene
   ? StoreInTitle
   : Scene extends IMainScene
     ? StoreInMain
-    : Scene extends IMeetingScene
-      ? StoreInMeeting
     : never

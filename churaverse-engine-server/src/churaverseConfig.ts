@@ -11,8 +11,6 @@ export const _pluginConfig: IPluginConfig = {
     MainScene: [],
     // eslint-disable-next-line @typescript-eslint/naming-convention
     TitleScene: [],
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    MeetingScene: [],
   },
 }
 
