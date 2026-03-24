@@ -14,7 +14,4 @@ declare module '../events' {
   export interface CVMainEventMap {
     start: StartEvent
   }
-  export interface CVMeetingEventMap {
-    start: StartEvent
-  }
 }

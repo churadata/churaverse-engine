@@ -14,7 +14,4 @@ declare module '../events' {
   export interface CVMainEventMap {
     update: UpdateEvent
   }
-  export interface CVMeetingEventMap {
-    update: UpdateEvent
-  }
 }
